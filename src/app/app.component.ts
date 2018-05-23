@@ -6,10 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentRoute = 'recipe';
-
-  routeSwitch(route: string) {
-    this.currentRoute = route;
-  }
 
 }

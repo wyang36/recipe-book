@@ -6,16 +6,8 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
-  @Output() headerClick = new EventEmitter<string>();
-
   constructor() { }
 
   ngOnInit() {
   }
-
-  onRouteSelect(route: string) {
-    this.headerClick.emit(route);
-  }
-
 }
