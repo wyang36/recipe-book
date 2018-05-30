@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipesService } from '../recipes.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-recipe-detail',
@@ -12,7 +13,7 @@ export class RecipeDetailComponent implements OnInit {
   recipe: Recipe;
   id: number;
 
-  constructor(private recipesService: RecipesService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private recipesService: RecipesService, private route: ActivatedRoute, private router: Router, private authService: AuthService) { }
 
   ngOnInit() {
     this.route.params.subscribe((params: Params) => {
